@@ -33,11 +33,7 @@ class IceCreamAdmin(admin.ModelAdmin):
     list_display_links = ('title',)
     filter_horizontal = ('toppings',)
 
-# Регистрируем класс с настройками админки для моделей IceCream и Category:
 admin.site.register(IceCream, IceCreamAdmin)
 admin.site.register(Category, CategoryAdmin)
-# Регистрируем модели Topping и Wrapper, 
-# чтобы ими можно было управлять через админку
-# (интерфейс админки для этих моделей останется стандартным):
 admin.site.register(Topping)
 admin.site.register(Wrapper)
